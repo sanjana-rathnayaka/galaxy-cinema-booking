@@ -1,0 +1,9 @@
+# All node_modules in any folder
+**/node_modules
+
+# All .env files in any folder
+**/.env
+
+# Build folders
+**/dist
+**/build
