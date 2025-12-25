@@ -10,7 +10,11 @@ const Movie = require('./models/Movie');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: '*',  // ඕනෑම තැනක සිට එන Request භාරගන්න
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 
 // --- MongoDB Connection (USING .ENV) ---
