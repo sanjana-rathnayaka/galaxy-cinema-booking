@@ -37,7 +37,7 @@ export default function AdminPage() {
   // --- DATA FETCHING ---
   const fetchMovies = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/movies');
+      const res = await fetch('https://galaxy-cinema-booking.vercel.app/api/movies');
       const data = await res.json();
       
       if (data.length === 0) {
@@ -61,7 +61,7 @@ export default function AdminPage() {
         showTime: time,
         description: 'Update this slot with a movie'
       };
-      await fetch('http://localhost:5000/api/movies', {
+      await fetch('https://galaxy-cinema-booking.vercel.app/api/movies', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(defaultMovie),
@@ -73,7 +73,7 @@ export default function AdminPage() {
 
   const fetchBookings = async () => {
     try {
-      const res = await fetch('http://localhost:5000/api/bookings');
+      const res = await fetch('https://galaxy-cinema-booking.vercel.app/api/bookings');
       const data = await res.json();
       setBookings(data);
     } catch (err) { console.error("Error fetching bookings", err); }
@@ -88,7 +88,7 @@ export default function AdminPage() {
 
   const handleUpdateMovie = async () => {
     if (!editingMovie) return;
-    await fetch(`http://localhost:5000/api/movies/${editingMovie._id}`, {
+    await fetch(`https://galaxy-cinema-booking.vercel.app/api/movies/${editingMovie._id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(editingMovie),
@@ -101,7 +101,7 @@ export default function AdminPage() {
   const handleClearAllBookings = async () => {
     if (window.confirm("Are you sure you want to DELETE ALL bookings? This cannot be undone!")) {
       try {
-        const res = await fetch('http://localhost:5000/api/bookings', {
+        const res = await fetch('https://galaxy-cinema-booking.vercel.app/api/bookings', {
           method: 'DELETE',
         });
 

@@ -43,7 +43,7 @@ export default function BookingPage() {
 
   // FETCH MOVIES FROM DB
   useEffect(() => {
-    fetch('http://localhost:5000/api/movies')
+    fetch('https://galaxy-cinema-booking.vercel.app/api/movies')
       .then(res => res.json())
       .then(data => {
         const timeOrder = ['10:30 AM', '01:30 PM', '04:30 PM', '07:30 PM'];
@@ -132,7 +132,7 @@ export default function BookingPage() {
         customerEmail: formData.email // <--- මෙන්න මේ කොටස ඔයාගේ code එකේ අඩු වෙලා තිබුණා
       };
 
-      const response = await fetch('http://localhost:5000/api/bookings', {
+      const response = await fetch('https://galaxy-cinema-booking.vercel.app/api/bookings', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(bookingData),
