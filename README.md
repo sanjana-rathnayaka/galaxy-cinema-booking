@@ -2,6 +2,10 @@
 
 A modern, full-featured Movie Ticket Booking Application built with **React**, **TypeScript**, and **Tailwind CSS**. This application allows users to book movie tickets, select seats visually, process simulated payments, and generate downloadable PDF tickets with QR codes.
 
+## 🌐 Live Access
+* **Main Application:** https://galaxy-cinema-booking-d95d.vercel.app/
+* **Admin Dashboard:** https://galaxy-cinema-booking-d95d.vercel.app/admin
+
 ## 🚀 Features
 
 * **Step-by-Step Booking Flow:** User-friendly interface guiding customers through details, movie selection, seat selection, and payment.
